@@ -1,0 +1,6 @@
+C:\Users\user\Documents\HackingGame\.mono\temp\bin\Tools\HackingGame.dll
+C:\Users\user\Documents\HackingGame\.mono\temp\bin\Tools\HackingGame.pdb
+C:\Users\user\Documents\HackingGame\.mono\temp\obj\Tools\HackingGame.csprojAssemblyReference.cache
+C:\Users\user\Documents\HackingGame\.mono\temp\obj\Tools\HackingGame.csproj.CoreCompileInputs.cache
+C:\Users\user\Documents\HackingGame\.mono\temp\obj\Tools\HackingGame.dll
+C:\Users\user\Documents\HackingGame\.mono\temp\obj\Tools\HackingGame.pdb
