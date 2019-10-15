@@ -8,21 +8,21 @@
 [node name="main" type="Node2D"]
 
 [node name="os_node" type="Sprite" parent="."]
-position = Vector2( 521.874, 283.145 )
+position = Vector2( 532.374, 301.145 )
 scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 1 )
 
 [node name="bank_node" type="Sprite" parent="."]
-position = Vector2( 357.24, 131.139 )
+position = Vector2( 367.74, 149.139 )
 scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 2 )
 
 [node name="ahs_node" type="Sprite" parent="."]
-position = Vector2( 292.424, 373.82 )
+position = Vector2( 302.924, 391.82 )
 scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 3 )
 
 [node name="empty_node" type="Sprite" parent="."]
-position = Vector2( 691.869, 155.256 )
+position = Vector2( 702.369, 173.256 )
 scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 4 )
