@@ -1,0 +1,69 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://DialogCreator/DialogCreator.cs" type="Script" id=1]
+[ext_resource path="res://DialogCreator/IdNavigation.tscn" type="PackedScene" id=2]
+[ext_resource path="res://DialogCreator/SolvencyTexts.cs" type="Script" id=3]
+[ext_resource path="res://DialogCreator/PossiblePhrases.cs" type="Script" id=4]
+[ext_resource path="res://DialogCreator/ControlPanel.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Fonts/SourceSansPro-Light.ttf" type="DynamicFontData" id=6]
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 6 )
+
+[node name="DialogCreator" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+
+[node name="BackGround" type="Panel" parent="."]
+modulate = Color( 1, 1, 1, 0.537255 )
+margin_left = -8.0
+margin_top = -18.0
+margin_right = 1033.0
+margin_bottom = 614.0
+
+[node name="IdNavigation" parent="." instance=ExtResource( 2 )]
+margin_left = 290.774
+margin_top = 21.6611
+margin_right = 729.774
+margin_bottom = 83.6611
+
+[node name="Id" parent="IdNavigation" index="3"]
+text = "0"
+
+[node name="SolvencyTexts" type="Control" parent="."]
+margin_left = 16.0
+margin_top = 96.0
+margin_right = 496.0
+margin_bottom = 496.0
+script = ExtResource( 3 )
+
+[node name="PossiblePhrases" type="Control" parent="."]
+margin_left = 524.43
+margin_top = 96.0
+margin_right = 1004.43
+margin_bottom = 496.0
+script = ExtResource( 4 )
+
+[node name="ControlPanel" parent="." instance=ExtResource( 5 )]
+margin_left = 79.8962
+margin_top = 530.863
+margin_right = 946.896
+margin_bottom = 595.863
+
+[node name="NeedAnswer" type="CheckBox" parent="."]
+margin_left = 384.018
+margin_top = 494.602
+margin_right = 628.018
+margin_bottom = 523.602
+custom_fonts/font = SubResource( 1 )
+text = "Требуется обязательный ответ"
+[connection signal="pressed" from="IdNavigation/Previous" to="." method="OnPreviousPressed"]
+[connection signal="pressed" from="IdNavigation/Next" to="." method="OnNextPressed"]
+[connection signal="text_changed" from="IdNavigation/Id" to="." method="OnIdChanged"]
+[connection signal="pressed" from="ControlPanel/Add" to="." method="AddPhrase"]
+[connection signal="pressed" from="ControlPanel/AddSolvencyText" to="." method="AddSolvencyText"]
+
+[editable path="IdNavigation"]
+
+[editable path="ControlPanel"]
