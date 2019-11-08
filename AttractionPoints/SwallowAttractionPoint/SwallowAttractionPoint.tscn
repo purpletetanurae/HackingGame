@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://AttractionPoints/AttractionPoint.tscn" type="PackedScene" id=1]
+[ext_resource path="res://AttractionPoints/SwallowAttractionPoint/SwallowAttractionPoint.cs" type="Script" id=2]
+[ext_resource path="res://AttractionPoints/SwallowAttractionPoint/door.png" type="Texture" id=3]
+
+[node name="SwallowAttractionPoint" instance=ExtResource( 1 )]
+script = ExtResource( 2 )
+
+[node name="Door" type="Sprite" parent="." index="2"]
+position = Vector2( 0.513351, 62.7861 )
+scale = Vector2( 0.15, 0.15 )
+texture = ExtResource( 3 )
+offset = Vector2( -0.48, -250 )

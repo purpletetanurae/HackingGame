@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://AttractionPoints/QueueAttractionPoints/Shops/SexShop/fallas.png" type="Texture" id=1]
+
+[node name="Dick" type="Node2D"]
+
+[node name="fallas" type="Sprite" parent="."]
+position = Vector2( 45.4251, -1.57549 )
+rotation = 0.63879
+scale = Vector2( 0.24, 0.24 )
+texture = ExtResource( 1 )
