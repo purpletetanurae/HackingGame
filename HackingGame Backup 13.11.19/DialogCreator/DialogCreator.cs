@@ -48,7 +48,23 @@ public class DialogCreator : Control
   {
     // WriteDatFile(_pathToPhrasesFile, new PhraseChainDev());
     // WriteDatFile(@"Mob\Dialogs\PhrasesLocalTest.dat", new Dictionary<int, Dictionary<string ,string>>());
-    LoadPhrases();  
+    LoadPhrases(); 
+    // _phraseChainDev.MobNames = new Dictionary<int, Dictionary<string, string>>();
+    // _phraseChainDev.MobNames.Add(0, new Dictionary<string, string>{{"ru", "Саша"}, {"en", "Sasha"}});
+    // _phraseChainDev.MobNames.Add(1, new Dictionary<string, string>{{"ru", "Максим"}, {"en", "Maxim"}});
+    // _phraseChainDev.MobNames.Add(2, new Dictionary<string, string>{{"ru", "Николай"}, {"en", "Nikolas"}});
+    // _phraseChainDev.MobNames.Add(3, new Dictionary<string, string>{{"ru", "Степан"}, {"en", "Steave"}});
+    // _phraseChainDev.MobNames.Add(4, new Dictionary<string, string>{{"ru", "Дарья"}, {"en", "Dolly"}});
+    // _phraseChainDev.MobNames.Add(5, new Dictionary<string, string>{{"ru", "Катя"}, {"en", "Kiti"}});
+    // _phraseChainDev.MobNames.Add(6, new Dictionary<string, string>{{"ru", "Пётр"}, {"en", "Piter"}});
+    // _phraseChainDev.MobNames.Add(7, new Dictionary<string, string>{{"ru", "Елена"}, {"en", "Elen"}});
+    // _phraseChainDev.MobNames.Add(8, new Dictionary<string, string>{{"ru", "Михаил"}, {"en", "Michael"}});
+    // _phraseChainDev.MobNames.Add(9, new Dictionary<string, string>{{"ru", "Артём"}, {"en", "Arthur"}});
+    // _phraseChainDev.MobNames.Add(10, new Dictionary<string, string>{{"ru", "Иван"}, {"en", "Ivan"}});
+    // _phraseChainDev.MobNames.Add(11, new Dictionary<string, string>{{"ru", "Ярослав"}, {"en", "Yaroslav"}});
+    // _phraseChainDev.MobNames.Add(12, new Dictionary<string, string>{{"ru", "Маргарита"}, {"en", "Margaret"}});
+    // _phraseChainDev.MobNames.Add(13, new Dictionary<string, string>{{"ru", "Денис"}, {"en", "Dennis"}});
+    // WriteDatFile(_pathToPhrasesFile, (PhraseChain)_phraseChainDev);
     LoadScenes();
     PhraseLocale.Load();
     PhraseLocaleDev.Load(PhraseLocale.GetDevData());
@@ -263,18 +279,7 @@ public class DialogCreator : Control
       return true;
     }
   }
-  ///<summary>
-  ///Распечатать коллекцию. Отладочный метод
-  ///</summary>
-  private void PrintDictonary<K, V>(Dictionary<K,V> dictionary)
-  {
-    GD.Print("---------------------");
-    foreach (KeyValuePair<K, V> kvp in dictionary)
-    {
-      GD.Print("key ", kvp.Key, " Value ", kvp.Value);
-    }
-    GD.Print("---------------------");
-  }
+  
   ///<summary>
   ///Обработка сигнала при нажатии кнопки вперёд
   ///</summary>

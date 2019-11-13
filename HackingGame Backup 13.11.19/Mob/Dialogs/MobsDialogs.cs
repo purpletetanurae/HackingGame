@@ -17,7 +17,7 @@ public class MobsDialogs : Node
   
   public override void _Ready()
   {
-    //SavePhrases();
+    PhraseLocale.Load();
     LoadPhrases();
   }
   private void LoadPhrases()

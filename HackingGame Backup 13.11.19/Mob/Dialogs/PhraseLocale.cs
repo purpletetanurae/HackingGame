@@ -41,6 +41,10 @@ public static class PhraseLocale
   {
     _locale = lang;
   }
+  public static string GetLocale()
+  {
+    return _locale;
+  }
 
   public static List<string> GetSupportedLocals()
   {

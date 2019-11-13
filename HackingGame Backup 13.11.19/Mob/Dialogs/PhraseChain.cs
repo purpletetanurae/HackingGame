@@ -9,6 +9,7 @@ public class PhraseChain
 {
   private Random _rand = new Random();
   public Dictionary<int, Phrase> Phrases { get; set; } = new Dictionary<int, Phrase>();
+  public Dictionary<int, Dictionary <string, string>> MobNames;
   
   
   public string GetNext(Dialog dialog)
@@ -27,7 +28,6 @@ public class PhraseChain
   }
   private List<CashWalker> GetAnswersMobs(Dialog dialog, CashWalker mob, CashWalker answeredMob = null)
   {
-
     List<CashWalker> answers = new List<CashWalker>();
     if (Phrases[dialog.IdPhrase].NeedAnswer)
     {
@@ -51,7 +51,6 @@ public class PhraseChain
     double roll = new Random().NextDouble();
     foreach(KeyValuePair<int, double> posPhrase in phrase.PossiblePhrases)
     {
-      
       roll -= posPhrase.Value;
       if (roll <= 0) return posPhrase.Key;
     }
@@ -59,16 +58,21 @@ public class PhraseChain
   }
   private string SetCurrentVariablesInText(string text, CashWalker mob)
   {
-    Regex pattern = new Regex(@"(?<=\[).*?(?=\])");
+    Regex pattern = new Regex(@"\[[^[\]]*\]");
     string newText = pattern.Replace(text, delegate (Match match)
     {
       return GetVar(match.Value, mob);
     });
     return newText;
   }
-  
+  private string GetRandomName()
+  {
+    return MobNames.ElementAt(_rand.Next(MobNames.Count)).Value[PhraseLocale.GetLocale()];
+  }
   private string GetVar(string name, CashWalker mob)
   {
+    //убираем скобки
+    name = name.Substr(1, name.Length - 2);
     string outVar = mob.DialogData.GetAnswer(name);
     if (outVar != "none")
     {
@@ -77,9 +81,10 @@ public class PhraseChain
 
     switch (name)
     {
-      case "MobName":
-        outVar = "...";
+      case "SpeakingMobName":
+        outVar = GetRandomName();
         mob.DialogData.AddAnswer(name, outVar);
+        outVar = ". Меня зовут " + outVar;
         break;
 
       case "CompanionName":
@@ -90,7 +95,6 @@ public class PhraseChain
         outVar = "!not found name!";
         break;
     }
-    
     return outVar;
   }
   

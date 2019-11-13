@@ -64,4 +64,16 @@ public class PhraseChainDev : PhraseChain
                               select phrase.Key;
     return query.ToList();
   }
+  ///<summary>
+  ///Распечатать коллекцию. Отладочный метод
+  ///</summary>
+  public static void PrintDictonary<K, V>(Dictionary<K,V> dictionary)
+  {
+    GD.Print("---------------------");
+    foreach (KeyValuePair<K, V> kvp in dictionary)
+    {
+      GD.Print("key ", kvp.Key, " Value ", kvp.Value);
+    }
+    GD.Print("---------------------");
+  }
 }

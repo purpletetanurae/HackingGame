@@ -2,17 +2,185 @@
 
 [ext_resource path="res://DialogCreator/ControlPanel.cs" type="Script" id=1]
 
-[sub_resource type="Animation" id=1]
+[sub_resource type="Animation" id=3]
 resource_name = "Hide"
 length = 0.5
 step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("BackGround/Panel:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0.5 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("BackGround/Panel:rect_size")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 0.68302, 0.535887 ),
+"update": 0,
+"values": [ Vector2( 180, 80 ), Vector2( 182, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("BackGround/Panel:rect_position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 0.482968, 0.435275 ),
+"update": 0,
+"values": [ Vector2( 668.634, -80 ), Vector2( 668.634, 0 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("BackGround/Panel:self_modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 0.615572, 0.466517 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0.615686 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("BackGround/Panel/SpinBox:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 0.466517, 0.517632 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("BackGround/Panel/Button:rect_scale")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 0.1, 0.5 ),
+"transitions": PoolRealArray( 0.406126, 0.25, 0.450625 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 2, 2 ), Vector2( 0.01, 0.01 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("BackGround/Panel/Button:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0.25, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
 
 [sub_resource type="Animation" id=2]
 length = 0.5
 step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("BackGround/Panel:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("BackGround/Panel:rect_size")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 0.535887, 0.68302 ),
+"update": 0,
+"values": [ Vector2( 182, 0 ), Vector2( 180, 80 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("BackGround/Panel:rect_position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 0.435275, 1 ),
+"update": 0,
+"values": [ Vector2( 668.634, 0 ), Vector2( 668.634, -80 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("BackGround/Panel:self_modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 0.466517, 0.615572 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 0.615686 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("BackGround/Panel/SpinBox:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 0.517632, 0.466517 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("BackGround/Panel/Button:rect_scale")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0.2, 0.3, 0.5 ),
+"transitions": PoolRealArray( 0.450625, 0.25, 0.406126 ),
+"update": 0,
+"values": [ Vector2( 0.01, 0.01 ), Vector2( 2, 2 ), Vector2( 1, 1 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("BackGround/Panel/Button:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0, 0.25 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
 
 [node name="ControlPanel" type="Control"]
-margin_right = 869.0
+margin_right = 1024.0
 margin_bottom = 66.0
 script = ExtResource( 1 )
 
@@ -22,23 +190,25 @@ margin_right = 1024.0
 margin_bottom = 66.0
 
 [node name="Panel" type="Panel" parent="BackGround"]
-visible = false
-self_modulate = Color( 1, 1, 1, 0.560784 )
-margin_left = 513.551
-margin_top = -80.0
-margin_right = 693.551
+self_modulate = Color( 1, 1, 1, 0 )
+margin_left = 668.634
+margin_right = 850.634
 
 [node name="SpinBox" type="SpinBox" parent="BackGround/Panel"]
+modulate = Color( 1, 1, 1, 0 )
 margin_left = 36.2752
 margin_top = 23.0032
 margin_right = 147.275
 margin_bottom = 59.0032
 
 [node name="Button" type="Button" parent="BackGround/Panel"]
+visible = false
 margin_left = 153.037
 margin_top = 6.03877
 margin_right = 173.037
 margin_bottom = 26.0388
+rect_scale = Vector2( 0.01, 0.01 )
+rect_pivot_offset = Vector2( 9.65, 9.08 )
 text = "X"
 
 [node name="Add" type="Button" parent="."]
@@ -86,7 +256,7 @@ margin_bottom = 50.0
 text = "Go to HeartStone"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/Hide = SubResource( 1 )
+anims/Hide = SubResource( 3 )
 anims/Show = SubResource( 2 )
 [connection signal="pressed" from="BackGround/Panel/Button" to="." method="OnPanelClouse"]
 [connection signal="mouse_entered" from="AddPossiblePhrase" to="." method="OnAddPossiblePhraseMouseEntered"]
