@@ -1,0 +1,92 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://DialogCreator/ControlPanel.cs" type="Script" id=1]
+
+[sub_resource type="Animation" id=1]
+resource_name = "Hide"
+length = 0.5
+step = 0.05
+
+[sub_resource type="Animation" id=2]
+length = 0.5
+step = 0.05
+
+[node name="ControlPanel" type="Control"]
+margin_right = 869.0
+margin_bottom = 66.0
+script = ExtResource( 1 )
+
+[node name="BackGround" type="Panel" parent="."]
+self_modulate = Color( 1, 1, 1, 0.560784 )
+margin_right = 1024.0
+margin_bottom = 66.0
+
+[node name="Panel" type="Panel" parent="BackGround"]
+visible = false
+self_modulate = Color( 1, 1, 1, 0.560784 )
+margin_left = 513.551
+margin_top = -80.0
+margin_right = 693.551
+
+[node name="SpinBox" type="SpinBox" parent="BackGround/Panel"]
+margin_left = 36.2752
+margin_top = 23.0032
+margin_right = 147.275
+margin_bottom = 59.0032
+
+[node name="Button" type="Button" parent="BackGround/Panel"]
+margin_left = 153.037
+margin_top = 6.03877
+margin_right = 173.037
+margin_bottom = 26.0388
+text = "X"
+
+[node name="Add" type="Button" parent="."]
+margin_left = 20.0
+margin_top = 15.0
+margin_right = 170.0
+margin_bottom = 50.0
+text = "Add"
+
+[node name="Delete" type="Button" parent="."]
+margin_left = 190.0
+margin_top = 15.0
+margin_right = 340.0
+margin_bottom = 50.0
+text = "Delete"
+
+[node name="Save" type="Button" parent="."]
+margin_left = 360.0
+margin_top = 15.0
+margin_right = 510.0
+margin_bottom = 50.0
+disabled = true
+text = "Save"
+
+[node name="AddPossiblePhrase" type="Button" parent="."]
+margin_left = 684.832
+margin_top = 15.0
+margin_right = 834.832
+margin_bottom = 50.0
+rect_pivot_offset = Vector2( 130, 15 )
+text = "Add PossiblePhrase"
+
+[node name="AddSolvencyText" type="Button" parent="."]
+margin_left = 850.442
+margin_top = 15.0
+margin_right = 1000.44
+margin_bottom = 50.0
+text = "Add SolvencyText"
+
+[node name="GoToLinkEditor" type="Button" parent="."]
+margin_left = 522.843
+margin_top = 15.0
+margin_right = 672.843
+margin_bottom = 50.0
+text = "Go to HeartStone"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/Hide = SubResource( 1 )
+anims/Show = SubResource( 2 )
+[connection signal="pressed" from="BackGround/Panel/Button" to="." method="OnPanelClouse"]
+[connection signal="mouse_entered" from="AddPossiblePhrase" to="." method="OnAddPossiblePhraseMouseEntered"]
